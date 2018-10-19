@@ -1,0 +1,44 @@
+<form action=""  #frmCustomer="ngForm" (ngSubmit)="saveCustomer()">
+  <h2>Customer Informations</h2>
+  <div>
+    <p>
+      <input type="text" name="customerName" [(ngModel)]="selectedCustomer.customerName" placeholder="Enter Customer Name" >
+    </p>
+    <p>
+      <input type="text" name="adress" [(ngModel)]="selectedCustomer.adress" placeholder="Enter Address" >
+    </p>
+    <p>
+      <input type="text" name="contact" [(ngModel)]="selectedCustomer.contact" placeholder="Enter Contact" >
+    </p>
+    <p>
+      <input type="text" name="mail" [(ngModel)]="selectedCustomer.mail" placeholder="Enter Email" >
+    </p>
+    <p>
+      <button class="button">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="button1">Cancel</button>
+    </p>
+  </div>
+</form>
+<div style="width: 100%">
+  <table class="table" id="tblEmployee" style="width: 1300px">
+    <thead>
+      <tr>
+        <th>Customer Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let customer of customers"
+      (click)="selectCustomer(customer)" [class.selected]="customer==selectedCustomer">
+        <td>{{customer.customerName}}</td>
+        <td>{{customer.adress}}</td>
+        <td>{{customer.contact}}</td>
+        <td>{{customer.mail}}</td>
+        <td><button  class="button2" (click)="deleteCustomer(customer)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

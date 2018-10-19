@@ -1,0 +1,51 @@
+input[type=text], input[type=password] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: blue;
+}
+
+.button{
+    width: 250px;
+    height: 40px;
+    background-color: lightskyblue;
+    padding: 10px;
+}
+
+.button1{
+    width: 250px;
+    height: 40px;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.button2{
+    width: 150px;
+    height: 40px;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+
+#tblEmployee tbody{
+    background-color: white;
+  }
+  
+  #tblEmployee tr{
+    cursor: pointer;
+  }
+  
+  #tblEmployee tr th:first-child, #tblEmployee tr td:first-child{
+    text-align: center;
+  }
+  
+  #tblEmployee tr td:last-child{
+    text-align: center;
+  }
+  
+  #tblEmployee tr td:last-child:hover{
+    color: red;
+  }
